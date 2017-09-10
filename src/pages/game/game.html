@@ -1,12 +1,12 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>game</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
   <h2>Welcome to your games view</h2>
-  <button color="primary" md-raised-button>Some text here</button>
+  <button md-raised-button (click)="navigate()">change page</button>
+  <button md-raised-button (click)="openActionSheet()">Action Sheets</button>
+  <button md-raised-button (click)="openBasicAlert()">Basic Alert</button>
 </ion-content>

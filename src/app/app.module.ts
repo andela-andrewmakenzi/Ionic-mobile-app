@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { GamePage } from '../pages/game/game';
+import { TornamentsPage } from '../pages/tornaments/tornaments';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     TabsPage,
-    GamePage
+    GamePage,
+    TornamentsPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     TabsPage,
-    GamePage
+    GamePage,
+    TornamentsPage
   ],
   providers: [
     StatusBar,

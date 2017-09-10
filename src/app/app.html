@@ -1,1 +1,14 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+  <ion-toolbar>
+    <ion-title>Something random</ion-title>
+  </ion-toolbar>
+  <ion-content>
+    <ion-list>
+      <ion-list-header>Sidenav</ion-list-header>
+      <button menuClose ion-item>something random</button>
+      <button menuClose ion-item>something else</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>
