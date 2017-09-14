@@ -9,7 +9,7 @@ import { GithubServiceProvider } from '../../providers/github-service/github-ser
 })
 export class SearchresultsPage {
 
-  user: Object;
+  user: string;
 
   constructor(
     private navCtrl: NavController,
