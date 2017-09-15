@@ -1,4 +1,8 @@
-<div>
-  Hello
-  {{ user.username }}
-</div>
+<ion-item *ngIf="user">
+  <ion-avatar item-left>
+    <img [src]="user.avatar_url" alt="">
+  </ion-avatar>
+  <h2>Name: {{ user.name }}</h2>
+  <h3>Company: {{ user.company }}</h3>
+  <h3>Followers: {{ user.followers }}</h3>
+</ion-item>

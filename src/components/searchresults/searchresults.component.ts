@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SearchresultsComponent {
 
-  @Input() user: string;
+  @Input() user: any;
 }

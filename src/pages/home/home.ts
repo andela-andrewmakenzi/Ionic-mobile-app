@@ -17,8 +17,17 @@ export class HomePage {
   }
 
   search() {
-    this.navCtrl.push('SearchresultsPage', {
-      username: this.username
-    });
+    if (this.username) {
+      this.navCtrl.push('SearchresultsPage', {
+        username: this.username
+      });
+    } else {
+      this.toastCtrl.create({
+        message: 'Enter github username',
+        duration: 2000,
+        showCloseButton: true,
+        closeButtonText: 'Dismiss'
+      }).present();
+    }
   }
 }

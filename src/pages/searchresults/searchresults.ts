@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { GithubServiceProvider } from '../../providers/github-service/github-service';
 
 @IonicPage()
@@ -9,23 +9,32 @@ import { GithubServiceProvider } from '../../providers/github-service/github-ser
 })
 export class SearchresultsPage {
 
-  user: string;
+  user: Object;
 
   constructor(
     private navCtrl: NavController,
     private navParams: NavParams,
-    private githubServiceProvider: GithubServiceProvider
+    private githubServiceProvider: GithubServiceProvider,
+    private toastCtrl: ToastController
   ) {
   }
 
   ionViewWillLoad() {
     // @todo research is this will hog application if slow
-    this.githubServiceProvider.fetchProfileInfo(this.navParams.get('username')).subscribe(
+
+    const username = this.navParams.get('username');
+    this.githubServiceProvider.fetchProfileInfo(username).subscribe(
       result => {
         this.user = result;
+        console.log(result);
       },
       error => {
-        console.log('there was an error');
+        this.toastCtrl.create({
+          message: error,
+          duration: 2000,
+          showCloseButton: true,
+          closeButtonText: 'Dismiss'
+        }).present();
       }
     );
   }
