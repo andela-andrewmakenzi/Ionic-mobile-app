@@ -17,4 +17,4 @@ import { ComponentsModule } from '../../components/components.module';
     ComponentsModule
   ],
 })
-export class SearchresultsPageModule {}
+export class SearchresultsPageModule { }
